@@ -27,7 +27,7 @@ ENV TF_FORK 0
 RUN mkdir -p ${PLUGIN_DIR}
 
 ADD https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_${TARGETOS}_${TARGETARCH}.zip /tmp
-ADD https://github.com/renemontilva/terraform-provider-confluence/releases/download/v1.2.0/terraform-provider-confluence_1.2.0_linux_arm64.zip /tmp
+ADD https://github.com/renemontilva/terraform-provider-confluence/releases/download/v1.2.0/${TERRAFORM_PROVIDER_DOWNLOAD_NAME}_${TERRAFORM_PROVIDER_VERSION}_${TARGETOS}_${TARGETARCH}.zip /tmp
 ADD terraformrc.hcl ${TF_CLI_CONFIG_FILE}
 
 RUN unzip /tmp/terraform_${TERRAFORM_VERSION}_${TARGETOS}_${TARGETARCH}.zip -d /usr/local/bin \
