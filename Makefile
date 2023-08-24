@@ -10,7 +10,7 @@ export TERRAFORM_PROVIDER_SOURCE ?= renemontilva/confluence
 export TERRAFORM_PROVIDER_REPO ?= https://github.com/renemontilva/terraform-provider-confluence
 export TERRAFORM_PROVIDER_VERSION ?= 1.2.0
 export TERRAFORM_PROVIDER_DOWNLOAD_NAME ?= terraform-provider-confluence
-export TERRAFORM_PROVIDER_DOWNLOAD_URL_PREFIX ?= https://releases.hashicorp.com/$(TERRAFORM_PROVIDER_DOWNLOAD_NAME)/$(TERRAFORM_PROVIDER_VERSION)
+export TERRAFORM_PROVIDER_DOWNLOAD_URL_PREFIX ?= https://github.com/renemontilva/terraform-provider-confluence/releases/download/v1.2.0/terraform-provider-confluence_1.2.0_linux_arm64.zip
 export TERRAFORM_NATIVE_PROVIDER_BINARY ?= terraform-provider-confluence_v1.2.0_x5
 export TERRAFORM_DOCS_PATH ?= docs/resources
 
