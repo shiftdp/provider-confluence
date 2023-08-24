@@ -9,8 +9,8 @@ import (
 
 	"github.com/upbound/upjet/pkg/controller"
 
-	resource "github.com/shiftdp/provider-confluence/internal/controller/null/resource"
-	providerconfig "github.com/shiftdp/provider-confluence/internal/controller/providerconfig"
+	resource "github.com/upbound/provider-confluence/internal/controller/null/resource"
+	providerconfig "github.com/upbound/provider-confluence/internal/controller/providerconfig"
 )
 
 // Setup creates all controllers with the supplied logger and adds them to

@@ -13,7 +13,7 @@ import (
 
 // Package type metadata.
 const (
-	Group   = "confluence.shiftdp.io"
+	Group   = "confluence.upbound.io"
 	Version = "v1beta1"
 )
 

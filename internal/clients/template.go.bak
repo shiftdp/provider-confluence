@@ -15,7 +15,7 @@ import (
 
 	"github.com/upbound/upjet/pkg/terraform"
 
-	"github.com/shiftdp/provider-confluence/apis/v1beta1"
+	"github.com/upbound/provider-confluence/apis/v1beta1"
 )
 
 const (
@@ -63,11 +63,10 @@ func TerraformSetupBuilder(version, providerSource, providerVersion string) terr
 		}
 
 		// Set credentials in Terraform provider configuration.
-		ps.Configuration = map[string]any{
-			"confluence_host": creds["confluence_host"],
-			"confluence_user": creds["confluence_user"],
-			"confluence_token": creds["confluence_token"],
-		}
+		/*ps.Configuration = map[string]any{
+			"username": creds["username"],
+			"password": creds["password"],
+		}*/
 		return ps, nil
 	}
 }

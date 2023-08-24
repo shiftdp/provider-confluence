@@ -3,4 +3,4 @@ kind: Provider
 metadata:
   name: provider-confluence
 spec:
-  package: shiftdp/provider-confluence:v0.1.0
+  package: upbound/provider-confluence:v0.1.0

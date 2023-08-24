@@ -10,13 +10,12 @@ import (
 
 	ujconfig "github.com/upbound/upjet/pkg/config"
 
-	"github.com/shiftdp/provider-confluence/config/content"
-	"github.com/shiftdp/provider-confluence/config/space"
+	"github.com/upbound/provider-confluence/config/null"
 )
 
 const (
 	resourcePrefix = "confluence"
-	modulePath     = "github.com/shiftdp/provider-confluence"
+	modulePath     = "github.com/upbound/provider-confluence"
 )
 
 //go:embed schema.json
@@ -37,8 +36,7 @@ func GetProvider() *ujconfig.Provider {
 
 	for _, configure := range []func(provider *ujconfig.Provider){
 		// add custom config functions
-		content.Configure,
-		space.Configure,
+		null.Configure,
 	} {
 		configure(pc)
 	}

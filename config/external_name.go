@@ -10,7 +10,8 @@ import "github.com/upbound/upjet/pkg/config"
 // provider.
 var ExternalNameConfigs = map[string]config.ExternalName{
 	// Import requires using a randomly generated ID from provider: nl-2e21sda
-	"null_resource": config.IdentifierFromProvider,
+	"confluence_content": config.IdentifierFromProvider,
+	"confluence_space": config.NameAsIdentifier,
 }
 
 // ExternalNameConfigurations applies all external name configs listed in the

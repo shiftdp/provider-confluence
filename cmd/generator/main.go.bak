@@ -11,7 +11,7 @@ import (
 
 	"github.com/upbound/upjet/pkg/pipeline"
 
-	"github.com/shiftdp/provider-confluence/config"
+	"github.com/upbound/provider-confluence/config"
 )
 
 func main() {
