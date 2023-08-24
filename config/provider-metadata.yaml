@@ -1,9 +1,25 @@
-name: hashicorp/null
+name: renemontilva/confluence
 resources:
-    null_resource Resource - terraform-provider-null:
+    confluence_content Resource - terraform-provider-confluence:
         subCategory: ""
-        description: The null_resource resource implements the standard resource lifecycle but takes no further action. The triggers argument allows specifying an arbitrary set of values that, when changed, will cause the resource to be replaced.
-        name: null_resource Resource - terraform-provider-null
-        title: null_resource Resource - terraform-provider-null
-        argumentDocs: {}
+        description: The resource content creates a new piece of content.
+        name: confluence_content Resource - terraform-provider-confluence
+        title: confluence_content Resource - terraform-provider-confluence
+        argumentDocs:
+            body: (String) The body of the new content.
+            id: (String) Content identifier
+            space: (String) The space that the content is being created in.
+            title: (String) Defines the document title.
+            type: (String) The type of the new content. Custom content types defined by apps are also supported. eg. 'page', 'blogpost', 'comment' etc.
+        importStatements: []
+    confluence_space Resource - terraform-provider-confluence:
+        subCategory: ""
+        description: Creates spaces, space is a container for organizing and grouping related pages of content. Spaces can be used to separate content by project, team, department, or other criteria. A Confluence space typically includes a set of pages that can be organized into a hierarchical structure, with parent and child pages.
+        name: confluence_space Resource - terraform-provider-confluence
+        title: confluence_space Resource - terraform-provider-confluence
+        argumentDocs:
+            description: (String) The description of the new/updated space.
+            id: (Number) Space identifier number.
+            key: '(String) The key of the space to be returned, which is the space name e.g: key="DEVOPS"'
+            name: (String) The name of the space.
         importStatements: []

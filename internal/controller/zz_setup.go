@@ -9,16 +9,18 @@ import (
 
 	"github.com/upbound/upjet/pkg/controller"
 
-	resource "github.com/shiftdp/provider-confluence/internal/controller/null/resource"
+	content "github.com/shiftdp/provider-confluence/internal/controller/content/content"
 	providerconfig "github.com/shiftdp/provider-confluence/internal/controller/providerconfig"
+	space "github.com/shiftdp/provider-confluence/internal/controller/space/space"
 )
 
 // Setup creates all controllers with the supplied logger and adds them to
 // the supplied manager.
 func Setup(mgr ctrl.Manager, o controller.Options) error {
 	for _, setup := range []func(ctrl.Manager, controller.Options) error{
-		resource.Setup,
+		content.Setup,
 		providerconfig.Setup,
+		space.Setup,
 	} {
 		if err := setup(mgr, o); err != nil {
 			return err

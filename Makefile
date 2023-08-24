@@ -4,7 +4,7 @@
 PROJECT_NAME ?= provider-confluence
 PROJECT_REPO ?= github.com/shiftdp/$(PROJECT_NAME)
 
-export TERRAFORM_VERSION ?= 1.5.5
+export TERRAFORM_VERSION ?= 1.2.1
 
 export TERRAFORM_PROVIDER_SOURCE ?= renemontilva/confluence
 export TERRAFORM_PROVIDER_REPO ?= https://github.com/renemontilva/terraform-provider-confluence

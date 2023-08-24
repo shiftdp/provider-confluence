@@ -10,7 +10,8 @@ package apis
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 
-	v1alpha1 "github.com/shiftdp/provider-confluence/apis/null/v1alpha1"
+	v1alpha1 "github.com/shiftdp/provider-confluence/apis/content/v1alpha1"
+	v1alpha1space "github.com/shiftdp/provider-confluence/apis/space/v1alpha1"
 	v1alpha1apis "github.com/shiftdp/provider-confluence/apis/v1alpha1"
 	v1beta1 "github.com/shiftdp/provider-confluence/apis/v1beta1"
 )
@@ -19,6 +20,7 @@ func init() {
 	// Register the types with the Scheme so the components can map objects to GroupVersionKinds and back
 	AddToSchemes = append(AddToSchemes,
 		v1alpha1.SchemeBuilder.AddToScheme,
+		v1alpha1space.SchemeBuilder.AddToScheme,
 		v1alpha1apis.SchemeBuilder.AddToScheme,
 		v1beta1.SchemeBuilder.AddToScheme,
 	)

@@ -1,0 +1,11 @@
+apiVersion: space.confluence.shiftdp.io/v1alpha1
+kind: Space
+metadata:
+  name: my-other-confluence-space
+spec:
+  forProvider:
+    key: devops
+    description: MyDescription
+    # type: global
+  providerConfigRef:
+    name: default
